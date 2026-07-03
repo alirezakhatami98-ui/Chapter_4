@@ -13,35 +13,36 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Container & Text'),
-          centerTitle: true,
+          title: const Text('Row & Column'),
         ),
-        body: Center(
-          child: Container(
-            width: 250,
-            padding: const EdgeInsets.all(20.0),
-            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-            decoration: BoxDecoration(
-              color: Colors.teal.shade100,
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(color: Colors.indigo, width: 2),
-              /*boxShadow: [
-                BoxShadow(
-                  color: Colors.indigo.withOpacity(0.3),
-                  blurRadius: 10,
-                  offset: const Offset(5, 5),
-                ),
-              ],*/
-            ),
-            child: const Text(
-              'من یک Container خوشگلم!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-                color: Colors.indigo,
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              // Container
+              Container(color: Colors.blue, width: 100, height: 40),
+              // ردیف آیکون‌ها
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Icon(Icons.star, size: 40, color: Colors.amber),
+                  Icon(Icons.favorite, size: 40, color: Colors.red),
+                  Icon(Icons.thumb_up, size: 40, color: Colors.blue),
+                ],
               ),
-            ),
+              // ستون دکمه‌ها
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ElevatedButton(onPressed: null, child: Text('دکمه ۱')),
+                  SizedBox(height: 10),
+                  ElevatedButton(onPressed: null, child: Text('دکمه ۲')),
+                  SizedBox(height: 10),
+                  ElevatedButton(onPressed: null, child: Text('دکمه ۳')),
+                ],
+              ),
+            ],
           ),
         ),
       ),

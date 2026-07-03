@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            'Hello! Welcome to the world of Flutter',
-            style: TextStyle(fontSize: 24, color: Colors.orange),
+            'Hello S.Alireza Khatami. Welcome to the flutter world.',
+            style: TextStyle(fontSize: 30, color: Colors.black),
           ),
         ),
       ),

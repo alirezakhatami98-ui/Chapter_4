@@ -51,6 +51,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: MyCustomFont
+      fonts:
+        - asset: assets/fonts/MyFont-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/MyFont-Bold.ttf
+          weight: 700
   assets:
     - assets/images/
 

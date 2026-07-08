@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics/screens/digital_card.dart';
+import 'package:flutter_basics/screens/product_landing.dart'; // وارد کردن صفحه محصول
 
 void main() {
   runApp(const MyApp());
 }
-//change the main.dart file to show the DigitalCard widget instead of the MyApp widget.
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -12,7 +12,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const DigitalCard(),
+      title: 'Flutter Basics',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.indigo,
+          centerTitle: true,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+            textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+      home: const ProductLanding(),
     );
   }
 }
